@@ -11,7 +11,7 @@
   programs.firefox = {
     enable = true;
     profiles = {
-      rxyhn = {
+      iggut = {
         id = 0;
         extensions = with pkgs.nur.repos.rycee.firefox-addons; [
           adnauseam

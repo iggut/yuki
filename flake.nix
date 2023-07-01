@@ -1,5 +1,5 @@
 {
-  description = "Rxyhn's NixOS Configuration";
+  description = "iggut's NixOS Configuration";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -43,18 +43,18 @@
 
     nixosConfigurations = {
       # Laptop
-      lenovo = nixpkgs.lib.nixosSystem {
+      gs66 = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/lenovo];
+        modules = [./hosts/gs66];
       };
     };
 
     homeConfigurations = {
       # Laptop
-      "rxyhn@lenovo" = home-manager.lib.homeManagerConfiguration {
+      "iggut@gs66" = home-manager.lib.homeManagerConfiguration {
         pkgs = nixpkgs.legacyPackages."x86_64-linux";
         extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home/rxyhn/lenovo];
+        modules = [./home/iggut/gs66];
       };
     };
   };

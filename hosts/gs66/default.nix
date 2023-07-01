@@ -16,7 +16,7 @@
     ../shared
 
     # Select the user configuration
-    ../shared/users/rxyhn.nix
+    ../shared/users/iggut.nix
 
     # Specific configuration
     ./hardware-configuration.nix
@@ -53,8 +53,8 @@
         gfxmodeEfi = "1920x1080";
         theme = pkgs.fetchzip {
           # https://github.com/AdisonCavani/distro-grub-themes
-          url = "https://raw.githubusercontent.com/AdisonCavani/distro-grub-themes/master/themes/lenovo.tar";
-          hash = "sha256-6ZevSnSNJ/Q67DTNJj8k4pjOjWZFj0tG0ljG3gwbLuc=";
+          url = "https://raw.githubusercontent.com/AdisonCavani/distro-grub-themes/master/themes/msi.tar";
+          hash = "sha256-4+DzRtdu8F9RRR+XrN8SPPnUOVOIgHr2vYOPqI1vcDM=";
           stripRoot = false;
         };
       };
@@ -122,7 +122,7 @@
   };
 
   networking = {
-    hostName = "lenovo";
+    hostName = "gs66";
     networkmanager.enable = true;
     useDHCP = false;
   };

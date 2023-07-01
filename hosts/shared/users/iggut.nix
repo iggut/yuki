@@ -6,8 +6,8 @@
   ifTheyExist = groups: builtins.filter (group: builtins.hasAttr group config.users.groups) groups;
 in {
   users.mutableUsers = false;
-  users.users.rxyhn = {
-    description = "Rayhan Pratama";
+  users.users.iggut = {
+    description = "Igor G";
     initialPassword = "nixos";
     isNormalUser = true;
     uid = 1000;
@@ -30,9 +30,9 @@ in {
         "libvirtd"
       ];
 
-    openssh.authorizedKeys.keys = ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIAIaeDlsQNZuf95V5QNjfV8eZncS3J0kV4EWvOlcavjh rxyhn@lenovo"];
+    openssh.authorizedKeys.keys = ["sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAIMntn36Qko/UqC8tFNaVBgJUtzA/jD4FmJQ0SY5g94KgAAAACXNzaDppZ2d1dA=="];
     packages = [pkgs.home-manager];
   };
 
-  home-manager.users.rxyhn = import ../../../home/rxyhn/${config.networking.hostName};
+  home-manager.users.iggut = import ../../../home/iggut/${config.networking.hostName};
 }
